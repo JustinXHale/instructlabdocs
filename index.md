@@ -2,12 +2,17 @@
 
 This project is dedicated to streamlining the onboarding process for InstructLab, a powerful tool for training and interacting with large language models (LLMs). Designed with UX designers, SMEs, and non-technical users in mind, this documentation provides a clear, step-by-step guide to installing, configuring, and using InstructLab on **macOS**.
 
+## Get Started
+Explore the documentation
+- [Prerequisites](prerequisites.md)
+- [Installation Guide](install.md)
+
 The workflow has been broken into four intuitive parts:
 
-**Install** – Setting up prerequisites and installing InstructLab.
-**Run/Chat** – Using InstructLab for model interaction.
-**Learn/Contribute** – Adding new knowledge and skills to the model.
-**Train** – Training the model with new data.
+- **Install** – Setting up prerequisites and installing InstructLab.
+- **Run/Chat** – Using InstructLab for model interaction.
+- **Learn/Contribute** – Adding new knowledge and skills to the model.
+- **Train** – Training the model with new data.
 
 ## By following this documentation, users will:
 
@@ -38,7 +43,3 @@ In its current state, the InstructLab onboarding process assumes a level of tech
 
 By integrating tools like **GitHub CLI** and leveraging user-friendly commands, we reduce the reliance on external tools or advanced command-line knowledge, focusing on what matters: building and improving LLMs.
 
-## Next Steps
-Explore the documentation to get started.
-- [Prerequisites](prerequisites.md)
-- [Installation Guide](install.md)

@@ -83,3 +83,5 @@ Once these steps are complete, you’re ready to begin the InstructLab installat
 ```
 ilab install instructlab
 ```
+
+Next page [Installation Guide](install.md)
