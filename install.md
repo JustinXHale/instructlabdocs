@@ -14,7 +14,7 @@ ilab install instructlab
 ## Hugging Face
 To download models later, you’ll need a Hugging Face API token. You can obtain one by:
 
-- Visit [Huggingface.com](https://huggingface.co/)
+- Visit [Huggingface.com](https://huggingface.co/){:target="_blank"}
 - Create a Free Account
 - Navigate to Settings > Access Tokens
 - Create new Access Token with ‘READ’ permissions (token name doesnt matter)
@@ -23,7 +23,7 @@ To download models later, you’ll need a Hugging Face API token. You can obtain
 Enter the token in the CLI
 
 # Step 3: Connect GitHub Account
-To contribute to an upstream repository or your personal one, you need to connect your GitHub account. If you don’t already have a free account, visit [GitHub.com](https://GitHub.com) to create one before proceeding.
+To contribute to an upstream repository or your personal one, you need to connect your GitHub account. If you don’t already have a free account, visit [GitHub.com](https://GitHub.com){:target="_blank"} to create one before proceeding.
 
 Once your GitHub account is set up, run the following command in your terminal and follow the prompts:
 
