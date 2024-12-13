@@ -37,8 +37,8 @@ InstructLab requires Python version 3.11.x. Check your Python version with:
 python3 --version
 ```
 
-If the version is 3.11.x or higher: Proceed to Step 3.
-If the version is lower than 3.11.x or not installed: Install Python3 using Homebrew:
+If the version is 3.11.x  Proceed to Step 3.
+If the version is not 3.11.x or not installed: Install Python3 using Homebrew:
 
 ```
 brew install python@3.11
@@ -58,8 +58,13 @@ brew install git
 ```
 
 # Step 4 (optional): Recommended: Install VSCode
-While not mandatory, Visual Studio Code (VSCode) provides a user-friendly text editor for managing files and directories. You can skip this step if you already have a preferred text editor.
-Install it with:
+While not mandatory, Visual Studio Code (VSCode) provides a user-friendly text editor for managing files and directories. You can skip this step if you already have a preferred text editor. Check if VS Code is installed by running:
+
+```
+code --version
+```
+If VS Code is installed: You will see a version number. Proceed to Step 4.
+If VS Dode is not installed: Install VS Code using Homebrew:
 
 ```
 brew install --cask visual-studio-code
@@ -84,15 +89,15 @@ brew install gh
 [x] Homebrew is installed (brew --version). <br>
 [x] Python3 (version 3.11.x) is installed (python3 --version). <br>
 [x] Git is installed (git --version). <br>
-[x] VSCode is installed. <br>
-[x] GitHub CLI is installed <br>
+[x] VSCode is installed. (code --version) <br>
+[x] GitHub CLI is installed (gh --version) <br>
 
 # Proceed to next steps
 
 Once these steps are complete, you’re ready to begin the InstructLab installation process by running:
 
 ```
-ilab install instructlab
+ilab install instructlab --interactivemode
 ```
 
 <table style="border: none; width: 100%;">
