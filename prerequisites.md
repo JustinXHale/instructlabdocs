@@ -1,3 +1,11 @@
+<table style="border: none; width: 100%;">
+  <tr>
+    <td style="text-align: right; width: 50%;">
+      <a href="https://justinxhale.github.io/instructlabdocs/install.html">Next</a>
+    </td>
+  </tr>
+</table>
+
 # Prerequisites Instructions for InstructLab (MacOS)
 
 These instructions guide MacOS users with M-Series chips to prepare their environment before installing and running InstructLab. 

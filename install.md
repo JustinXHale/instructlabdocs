@@ -1,7 +1,7 @@
 <table style="border: none; width: 100%;">
   <tr>
     <td style="text-align: left; width: 50%;">
-      <a href="prerequisites.md">Back</a>
+      <a href="https://justinxhale.github.io/instructlabdocs/">Back</a>
     </td>
     <td style="text-align: right; width: 50%;">
       <a href="next-page.md">Next</a>
