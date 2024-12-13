@@ -7,9 +7,10 @@ Explore the documentation
 - [Prerequisites](prerequisites.md)
 - [Installation Guide](install.md)
 
-The workflow has been broken into four intuitive parts:
+The workflow has been broken into five intuitive parts:
 
-- **Install** – Setting up prerequisites and installing InstructLab.
+- **Prerequisities** - What you need to get started
+- **Install** – Setting up installing InstructLab.
 - **Run/Chat** – Using InstructLab for model interaction.
 - **Learn/Contribute** – Adding new knowledge and skills to the model.
 - **Train** – Training the model with new data.
@@ -28,13 +29,13 @@ In its current state, the InstructLab onboarding process assumes a level of tech
 - **Combining Taxonomies**: The updated workflow uses a single taxonomy setup, reducing complexity and ensuring all contributions can be easily managed and shared upstream.
 - **Clear User Flow**: The four-part structure helps users focus on one task at a time while maintaining a logical sequence.
 
-## This method was chosen to align with the goals of InstructLab:
+### This method was chosen to align with the goals of InstructLab:
 
 - Enable users to train LLMs locally with minimal barriers.
 - Encourage collaboration by simplifying contributions to upstream repositories.
 - Provide a consistent user experience across the installation, usage, and learning phases.
 
-# Pros of This Approach
+# Hope to accomplish
 - Simplified Onboarding: Interactive Mode reduces cognitive load by guiding users through the setup process.
 - Minimized Errors: Pre-configured options and defaults lower the likelihood of mistakes during installation and configuration.
 - User-Centric: Designed for both technical and non-technical users, making InstructLab more accessible.
