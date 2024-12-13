@@ -1,4 +1,4 @@
-## Welcome to [(justinxhale's)](https://github.com/JustinXHale) InstructLab Onboarding Documentation (for MacOS)
+## Welcome to [(justinxhale's)](https://github.com/JustinXHale){:target="_blank"} InstructLab Onboarding Documentation (for MacOS)
 
 This project is dedicated to streamlining the onboarding process for InstructLab, a powerful tool for training and interacting with large language models (LLMs). Designed with UX designers, SMEs, and non-technical users in mind, this documentation provides a clear, step-by-step guide to installing, configuring, and using InstructLab on **macOS**.
 
