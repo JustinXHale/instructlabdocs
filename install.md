@@ -1,3 +1,14 @@
+<table style="border: none; width: 100%;">
+  <tr>
+    <td style="text-align: left; width: 50%;">
+      <a href="prerequisites.md">Back</a>
+    </td>
+    <td style="text-align: right; width: 50%;">
+      <a href="next-page.md">Next</a>
+    </td>
+  </tr>
+</table>
+
 # Install Instructions for InstructLab (MacOS)
 This guide will take you through the installation process for InstructLab. It includes setting up prerequisites, configuring accounts, and downloading necessary components. This guide is structured for interactive mode, simplifying the process step-by-step. If you have not check the per-requisities, visit per-requisites.md before proceeding.
 
