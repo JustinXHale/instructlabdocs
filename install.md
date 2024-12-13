@@ -1,7 +1,7 @@
 <table style="border: none; width: 100%;">
   <tr>
     <td style="text-align: left; width: 50%;">
-      <a href="https://justinxhale.github.io/Prerequisites/">Back to Prerequisites</a>
+      <a href="https://justinxhale.github.io/instructlabdocs/prerequisites.html">Back to Prerequisites</a>
     </td>
     <td style="text-align: right; width: 50%;">
       <a href="#">Next Page: Running and Chating with Model</a>
@@ -171,3 +171,14 @@ Next Steps: You are now ready to serve and chat with the models. Run the followi
 ```
 ilab model chat
 ```
+
+<table style="border: none; width: 100%;">
+  <tr>
+    <td style="text-align: left; width: 50%;">
+      <a href="https://justinxhale.github.io/instructlabdocs/prerequisites.html">Back to Prerequisites</a>
+    </td>
+    <td style="text-align: right; width: 50%;">
+      <a href="#">Next Page: Running and Chating with Model</a>
+    </td>
+  </tr>
+</table>
