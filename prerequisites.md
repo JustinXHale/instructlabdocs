@@ -1,7 +1,10 @@
 <table style="border: none; width: 100%;">
   <tr>
+    <td style="text-align: left; width: 50%;">
+      <a href="https://justinxhale.github.io/instructlabdocs/">Back to Home</a>
+    </td>
     <td style="text-align: right; width: 50%;">
-      <a href="https://justinxhale.github.io/instructlabdocs/install.html">Next</a>
+      <a href="https://justinxhale.github.io/instructlabdocs/install.html">Next Page: Installation Guide</a>
     </td>
   </tr>
 </table>
@@ -92,4 +95,13 @@ Once these steps are complete, you’re ready to begin the InstructLab installat
 ilab install instructlab
 ```
 
-Next page [Installation Guide](install.md)
+<table style="border: none; width: 100%;">
+  <tr>
+    <td style="text-align: left; width: 50%;">
+      <a href="https://justinxhale.github.io/instructlabdocs/">Back to Home</a>
+    </td>
+    <td style="text-align: right; width: 50%;">
+      <a href="https://justinxhale.github.io/instructlabdocs/install.html">Next Page: Installation Guide</a>
+    </td>
+  </tr>
+</table>

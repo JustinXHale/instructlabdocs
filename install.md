@@ -1,10 +1,10 @@
 <table style="border: none; width: 100%;">
   <tr>
     <td style="text-align: left; width: 50%;">
-      <a href="https://justinxhale.github.io/instructlabdocs/">Back</a>
+      <a href="https://justinxhale.github.io/Prerequisites/">Back to Prerequisites</a>
     </td>
     <td style="text-align: right; width: 50%;">
-      <a href="next-page.md">Next</a>
+      <a href="#">Next Page: Running and Chating with Model</a>
     </td>
   </tr>
 </table>
