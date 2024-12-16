@@ -11,8 +11,25 @@
 
 # Prerequisites Instructions for InstructLab (MacOS)
 
-These instructions guide MacOS users with M-Series chips to prepare their environment before installing and running InstructLab. 
+To get started with InstructLab on macOS, you need a few foundational tools installed. You can choose to **run a single script** to automate this process or follow the **manual steps** below.
 
+## Step 0: Run the Pre-Requisite Script
+This script that automatically checks for and installs all required tools: **Homebrew**, **Python 3.11**, **Git**, and **GitHub CLI**.
+
+### downloads the script
+```
+curl -O https://raw.githubusercontent.com/JustinXHale/instructlabdocs/main/pre-req-check.sh
+```
+
+### make script exectuable 
+```
+chmod +x pre-req-check.sh
+```
+
+## run the script
+```
+./pre-req-check.sh
+```
 ---
 
 ## Step 1: Verify Homebrew Installation
@@ -57,7 +74,7 @@ If Git is not installed: Install Git using Homebrew:
 brew install git
 ```
 
-# Step 4 (optional): Recommended: Install VSCode
+## Step 4 (optional): Recommended: Install VSCode
 While not mandatory, Visual Studio Code (VSCode) provides a user-friendly text editor for managing files and directories. You can skip this step if you already have a preferred text editor. Check if VS Code is installed by running:
 
 ```
@@ -70,7 +87,7 @@ If VS Dode is not installed: Install VS Code using Homebrew:
 brew install --cask visual-studio-code
 ```
 
-# Step 5 (Optional): Verify GitHub CLI is installed
+## Step 5 (Optional): Verify GitHub CLI is installed
 While not mandatory or required. Install the GitHub CLI will simply futre GitHub task, like connecting your account. Check if GitHub is installed by running:
 
 ```
@@ -83,7 +100,7 @@ If Github CLI is not installed, install via Homebrew:
 brew install gh
 ```
 
-# Summary Checklist
+## Summary Checklist
 ### Before proceeding, ensure the following:
 
 [x] Homebrew is installed (brew --version). <br>
@@ -92,7 +109,7 @@ brew install gh
 [x] VSCode is installed. (code --version) <br>
 [x] GitHub CLI is installed (gh --version) <br>
 
-# Proceed to next steps
+## Proceed to next steps
 
 Once these steps are complete, you’re ready to begin the InstructLab installation process by running:
 
