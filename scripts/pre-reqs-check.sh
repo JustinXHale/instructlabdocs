@@ -55,4 +55,5 @@ echo "=================================================="
 echo "  All pre-requisites are now installed! "
 echo "  You can proceed with InstructLab setup."
 echo "  Run: ilab install instructlab --interactivemode"
+echo "  HI FROM JUSTIN HALE, RED HAT... HOPE THIS WORKS!
 echo "=================================================="

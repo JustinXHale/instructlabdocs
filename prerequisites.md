@@ -16,20 +16,14 @@ To get started with InstructLab on macOS, you need a few foundational tools inst
 ## Step 0: Run the Pre-Requisite Script
 This script that automatically checks for and installs all required tools: **Homebrew**, **Python 3.11**, **Git**, and **GitHub CLI**.
 
-### downloads the script
+### downloads the script, make exectuable, run
 ```
-curl -O https://raw.githubusercontent.com/JustinXHale/instructlabdocs/main/pre-req-check.sh
-```
-
-### make script exectuable 
-```
-chmod +x pre-req-check.sh
+cd ~
+curl -O https://raw.githubusercontent.com/JustinXHale/instructlabdocs/main/scripts/pre-reqs-check.sh
+chmod +x pre-reqs-check.sh
+./pre-reqs-check.sh
 ```
 
-## run the script
-```
-./pre-req-check.sh
-```
 ---
 
 ## Step 1: Verify Homebrew Installation
