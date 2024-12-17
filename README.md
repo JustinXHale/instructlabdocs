@@ -30,4 +30,4 @@ curl -s https://raw.githubusercontent.com/JustinXHale/instructlabdocs/main/scrip
 
 # Additional Documentation
 For detailed InstructLab onboarding steps, refer to the official documentation here:
-[InstructLab Pre-Requisites Documentation](https://justinxhale.github.io/instructlabdocs/){:target="_blank"}
+[InstructLab Pre-Requisites Documentation](https://justinxhale.github.io/instructlabdocs/){target="_blank"}
