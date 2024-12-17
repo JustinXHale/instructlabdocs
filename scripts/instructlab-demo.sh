@@ -127,6 +127,16 @@ sleep 1
 status_ok "Git successfully installed."
 add_spacing
 
+# Simulate VS Code Check
+purple_text "code --version"
+sleep 1
+echo "VS Code not found."
+
+echo "Installing VS Code ..."
+sleep 1
+status_ok "VS Code successfully installed."
+add_spacing
+
 # Simulate GitHub CLI Check
 purple_text "gh --version"
 sleep 1
