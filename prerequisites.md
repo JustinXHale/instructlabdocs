@@ -23,8 +23,16 @@ curl -O https://raw.githubusercontent.com/JustinXHale/instructlabdocs/main/scrip
 chmod +x pre-reqs-check.sh
 ./pre-reqs-check.sh
 ```
-
+<table style="border: none; width: 100%;">
+  <tr>
+    <td style="text-align: left; width: 50%;">
+      <a href="https://justinxhale.github.io/instructlabdocs/install.html">Next Page: Installation Guide</a>
+    </td>
+  </tr>
+</table>
 ---
+
+# If you rather not run the script, you can run these commands individually. 
 
 ## Step 1: Verify Homebrew Installation
 
