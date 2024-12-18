@@ -74,9 +74,9 @@ add_spacing
 echo "LET'S GET STARTED"
 add_spacing
 
-# ======================================================
-# check if the user wants to get started with pre-reqs
-# =====================================================
+# ==========================================================
+# check if the user wants to get started with pre-requisites
+# ==========================================================
 
 gold_text "Do you want to proceed with the setup? [Yes/No]: "
 read -r proceed_input
@@ -245,7 +245,7 @@ if [[ "$gh_input" =~ ^[Yy] ]]; then
   echo "✔ Configured git protocol: HTTPS"
   echo "✔ Logged in as RedHatUXD"
 else
-  status_error "GitHub connection was skipped. Continueing with remaining InstructLab setup."
+  status_error "GitHub connection was skipped. Continuing with remaining InstructLab setup."
 fi
 add_spacing
 
@@ -261,7 +261,7 @@ if ! gh auth status &>/dev/null; then
     exit 1
   fi
 else
-  status_ok "GitHub was sucessfully authenticated or skipped."
+  status_ok "GitHub was successfully authenticated or skipped."
 fi
 add_spacing
 }

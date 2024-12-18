@@ -48,7 +48,7 @@ echo "  Welcome to InstructLab's Interactive Mode"
 echo "  This mode will guide you through the installation."
 echo "======================================================"
 echo
-echo "This guided setup ensures that all steps—account setup, installation, and configuration—are completed sucessfully."
+echo "This guided setup ensures that all steps—account setup, installation, and configuration—are completed successfully."
 echo "Whether you are new to the CLI or an experienced user, this walkthrough simplifies the process step-by-step."
 add_spacing
 
@@ -79,8 +79,8 @@ echo "===================================="
 echo "Connecting to Your GitHub Account"
 echo "===================================="
 highlight "Using 'gh auth login' simplifies authentication and sets you up for upstream contributions."
-
-echo "To contribute back to the upstream repository or even your personal one, you will need to connect your GitHub account.
+add_spacing
+highlight "To contribute back to the upstream repository or even your personal one, you will need to connect your GitHub account.
 If you do not have a free account visit htts://github.com before proceeding."
 add_spacing
 
