@@ -1,0 +1,66 @@
+# Enhance ilab model serve with Interactive Model Selection and Category Filtering
+
+# Current Process Overview:
+- Users serve a model by executing *ilab model serve <PATH>.*
+- If no path is specified, the default model, _Granite_, is served.
+- To serve a different model, users must:
+    - Manually locate the path to the model file.
+    - Enter the correct path when running the ilab model serve command.
+
+# Key Pain Points for Users:
+1. _Manual Path Entry:_ The user has to locate and type the full path for each model, which is very cumbersome and error-prone.
+2. _Model Visibility:_ It is difficult for the user to find out what models are available and where they are kept.
+3. _Default Assumption:_ Serving the Granite model by default may not be aligned with user needs or preferences.
+
+# Proposed Enhancements:
+1. Interactive Model Selection (*serve_model*)
+Introduce an interactive mode that allows users to select from a list of available models when running *ilab model serve* without specifying a path.
+
+Example:
+
+```
+$ ilab model serve
+
+Available models:
+1. granite-7b-lab-Q4_K_M.gguf (Default)
+2. mistral-7b-instruct-v0.2.Q4_K_M.gguf
+3. merlinite-7b-lab-Q4_K_M.gguf
+
+Enter the number of the model you want to serve [Press Enter for default]: 2
+```
+- _Default Option:_ If the user presses Enter without selecting a model, the first model (Granite) will be served.
+- Benefits:
+    - Reduces manual errors.
+    - Improves discoverability of available models.
+    - Simplifies the workflow for new and experienced users.
+
+## Scalable Enhancement (future)
+For users who may have a large number of downloaded models, introduce a category-based filter.
+
+Example:
+
+```
+$ ilab model serve
+Available Categories:
+1. Interaction Models
+2. Teacher Models
+3. Fine-Tuning/Testing Models
+4. Pre-trained Models
+5. Domain-Specific Models
+
+Enter the number of the category you want to explore [Press Enter for default category (Interaction Models)]: 2
+
+Available Models in "Teacher Models":
+1. mistral-7b-instruct-v0.2.Q4_K_M.gguf
+2. teacher-guided-3b-v1.0
+
+Enter the number of the model you want to serve [Press Enter for default]: 1
+
+You selected: mistral-7b-instruct-v0.2.Q4_K_M.gguf
+Serving model...
+```
+# Benefits of This Approach:
+1. _Improved Model Visibility:_ It allows users to see at once the models available, grouped by categories for better finding of the right model for specific tasks.
+2. _Faster Selection Process:_ Instead of manually typing the path to a model, users can quickly browse categories and select from an indexed list.
+3. _Scalable to Large Model Repositories:_ When there is an addition of more and more models within InstructLab, the selection would maintain clarity.
+
