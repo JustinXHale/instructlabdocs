@@ -499,10 +499,10 @@ add_spacing
   sleep 1
 
   # Completion Message
-  echo "==================================================="
+  echo "--------------------------------------------------------"
   status_ok "InstructLab Configuration Completed Successfully!"
-  light_blue_text "Step 2 completed, moving to Step 5 of 5"
-  echo "==================================================="
+  light_blue_text "Step 4 completed, moving to Step 5 of 5"
+  echo "-------------------------------------------------------"
 add_spacing
 }
 
@@ -511,7 +511,7 @@ add_spacing
 # ============================================
 model_download() {
   echo "======================================================"
-  echo "  Step 4: Downloading Models"
+  echo "  Step 5: Downloading Models"
   echo "======================================================"
   add_spacing
 
