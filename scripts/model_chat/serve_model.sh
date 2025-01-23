@@ -3,6 +3,7 @@
 # List of available models (Add or modify models as needed)
 models=(
     "granite-7b-lab-Q4_K_M.gguf"
+    "granite-7b-lab-q4_k_m.gguf - TRAINED"
     "mistral-7b-instruct-v0.2.Q4_K.gguf"
     "merlinite-7b-lab-Q4_K_M.gguf"
 )

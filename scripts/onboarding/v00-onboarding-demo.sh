@@ -221,7 +221,7 @@ gold_text "Enter your Hugging Face Token (Press [ENTER] to skip): "
   status_ok "Hugging Face token saved successfully."
   add_spacing
 
-  # GitHub Authentication
+# GitHub Authentication
 echo "Connecting to GitHub Account."
 highlight "Using 'gh auth login' to authenticate and prepare for upstream contributions easily."
 

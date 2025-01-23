@@ -1,32 +1,50 @@
 ## instructlabdocs
 
-This repository contains a pre-requisite script to help users quickly check and install required tools for InstructLab on MacOS. The script automates the setup of foundational tools like Homebrew, Python 3.11, Git, and GitHub CLI, ensuring a smooth onboarding experience.
-
-# What Does the Script Do?
-The script automates the following steps:
-
-1. Checks for Homebrew and installs it if not found.
-2. Checks for Python 3.11 and installs it if not found.
-3. Checks for Git and installs it if not found.
-4. Checks for GitHub CLI (gh) and installs it if not found.
-5. Prompts users to proceed with the InstructLab installation setup.
-6. Sets up a default directory for InstructLab, creates a virtual environment, and installs InstructLab.
+This repository contains a demo script designed to simulate the onboarding process for setting up InstructLab. The script provides an interactive experience to guide users through all necessary pre-requisite checks, installations, and configurations.
 
 # How to Use the Script
 1. Open your Terminal on MacOS.
 2. Run the following command to download and execute the script in one step:
 ```
-curl -s https://raw.githubusercontent.com/JustinXHale/instructlabdocs/main/scripts/instructlab-demo.sh | bash
+curl -s https://raw.githubusercontent.com/your-repo-path/v01-onboarding-demo.sh -o v01-onboarding-demo.sh
 ```
-3. Follow the prompts provided in the terminal.
-- The script will guide you step-by-step.
-- If a tool is already installed, the script will skip its installation.
+3. Make the Script Executable
+```
+chmod +x v01-onboarding-demo.sh
+```
+4. Run the script
+```
+./v01-onboarding-demo.sh
+```
+5. Follow the interactive prompts in your terminal.
 
-# Why Use This Script?
-- Automates the tedious manual checks for pre-requisites.
-- Reduces errors during the onboarding process.
-- Provides clear prompts and color-coded feedback for better user experience.
-- Saves time for both novice and experienced users.
+# Features
+## Interactive Setup:
+- Step-by-step guidance for each part of the installation process.
+- Clear prompts with color-coded feedback.
+
+## Comprehensive Pre-Requisite Check:
+- Simulates the installation of:
+    - Xcode Command Line Tools
+    - Homebrew
+    - Python (with version selection)
+    - Git
+    - Optional tools like VS Code and GitHub CLI
+
+## Hugging Face Token and GitHub Authentication:
+- Guides users through creating and adding a Hugging Face token.
+- Simulates GitHub authentication with gh auth login.
+
+## InstructLab Installation:
+- Simulates the setup of a Python virtual environment and the installation of InstructLab.
+- Allows users to choose the installation directory or use the current/default directory.
+
+## Configuration Setup:
+- Guides users through setting up the taxonomy and model directories.
+- Simulates generating configuration files for InstructLab.
+
+## Model Download:
+- Simulates downloading and listing available models.
 
 # Additional Documentation
 For detailed InstructLab onboarding steps, refer to the official documentation here:
