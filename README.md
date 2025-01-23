@@ -4,9 +4,9 @@ This repository contains a demo script designed to simulate the onboarding proce
 
 # How to Use the Script
 1. Open your Terminal on MacOS.
-2. Run the following command to download and execute the script in one step:
+2. Run the following command to download the script:
 ```
-curl -s https://raw.githubusercontent.com/your-repo-path/v01-onboarding-demo.sh -o v01-onboarding-demo.sh
+curl -s https://raw.githubusercontent.com/JustinXHale/instructlabdocs/main/scripts/onboarding/v01-onboarding-demo.sh -o v01-onboarding-demo.sh
 ```
 3. Make the Script Executable
 ```
