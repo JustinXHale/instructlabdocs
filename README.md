@@ -45,7 +45,3 @@ chmod +x v01-onboarding-demo.sh
 
 ## Model Download:
 - Simulates downloading and listing available models.
-
-# Additional Documentation
-For detailed InstructLab onboarding steps, refer to the official documentation here:
-[InstructLab Pre-Requisites Documentation](https://justinxhale.github.io/instructlabdocs/)
