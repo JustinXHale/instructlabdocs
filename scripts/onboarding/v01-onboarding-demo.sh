@@ -55,6 +55,7 @@ echo "======================================================"
 add_spacing
 echo "This guided setup process is designed to get you up and running 
 with InstructLab as quickly and efficiently as possible."
+add_spacing
 echo "By the end of this setup, you will be ready to: 
 √ Chat with pre-trained models.
 √ Add knowledge to improve models.
@@ -75,8 +76,8 @@ if [[ "$proceed" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
     echo "1. Homebrew"
     echo "2. Python"
     echo "3. Git"
-    echo "4. X-Code"
-    echo "5. VS Code (optional)"
+    echo "4. XCode"
+    echo "5. Visual Code Studio (optional)"
     echo "6. GitHub CLI (optional)"
     echo ""
 
@@ -105,8 +106,8 @@ add_spacing
 # Check & Simulate Xcode Command Line Tools Check
 purple_text "xcode-select --install"
 sleep 1
-echo "X-Code not found."
-echo "Simulating installation of X-Code..."
+echo "XCode not found."
+echo "Simulating installation of XCode..."
 status_ok "xcode-select version 2409 successfully installed"
 add_spacing
 
@@ -120,7 +121,7 @@ add_spacing
 purple_text "python3 --version"
 sleep 1
 echo "Select the Python version to install:"
-echo "[1] Python 3.11.x"
+echo "[1-recommended] Python 3.11.x"
 echo "[2] Python 3.10.x"
 gold_prompt "Choose version [1 - Recommended]: " python_choice
 
@@ -189,11 +190,11 @@ fi
 add_spacing
 
 echo "-----------------------------------"
-echo "Pre-requisites check confirmation"
+echo "Pre-requisites Summary"
 echo "-----------------------------------"
 
 # Final Checks for User Confirmation
-status_ok "X-Code 2409 installed."
+status_ok "XCode 2409 installed."
 status_ok "Homebrew 4.4.xx installed."
 status_ok "Git 2.39.5 installed."
 
@@ -220,7 +221,7 @@ status_ok "Git 2.39.5 installed."
         status_error "GH CLI not installed."
     fi
 
-    light_blue_text "Pre-requisites installed, moving to step 2 of 5."
+    light_blue_text "Pre-requisites installed, moving to Step 2 of 5."
     sleep 1
     add_spacing
 }
@@ -228,12 +229,12 @@ status_ok "Git 2.39.5 installed."
 add_spacing
 huggingface_and_github_setup() {
 echo "======================================================"
-echo "Step 2: HuggingFace & GitHub Setup"
+echo "Step 2: Hugging Face & GitHub Setup"
 echo "======================================================"
 add_spacing
 
 # Hugging Face Token Setup
-light_blue_text "Checking for a locally saved Hugging Face token..."
+light_blue_text "Checking for a locally-saved Hugging Face token..."
 sleep 1  
 status_error "No Hugging Face token found."
 
@@ -242,10 +243,10 @@ echo "Follow these steps to create your token:"
 echo "1. Visit https://huggingface.co/."
 echo "2. Create an account if you don’t have one."
 echo "3. Go to 'Settings > Access Tokens'."
-echo "4. Create a token with 'READ' permissions and paste it below."
+echo "4. Use Token Type 'READ' permissions and paste it below."
 add_spacing
 
-gold_text "Enter your Hugging Face Token (or press [ENTER] to skip): "
+gold_text "Paste your Hugging Face Token (or press [ENTER] to skip): "
 
 # Masked Input Loop
 hf_token=""
