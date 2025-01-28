@@ -121,9 +121,9 @@ add_spacing
 purple_text "python3 --version"
 sleep 1
 echo "Select the Python version to install:"
-echo "[1-recommended] Python 3.11.x"
+echo "[1] Python 3.11.x (Recommended)"
 echo "[2] Python 3.10.x"
-gold_prompt "Choose version [1 - Recommended]: " python_choice
+gold_prompt "Choose version: " python_choice
 
 case "$python_choice" in
 1)
@@ -422,12 +422,12 @@ add_spacing
     add_spacing
 
     gold_text "How would you like to set up your taxonomy?"
-    echo "[1 - Default] Fork the taxonomy repo to your GitHub account and clone your fork."
+    echo "[1] Fork the taxonomy repo to your GitHub account and clone your fork. (Recommended)"
     echo "[2] Clone the upstream taxonomy repo directly (read-only mode)."
     echo "[3] Use an existing taxonomy directory."
     add_spacing
 
-    gold_prompt "Enter the number of your choice [1 - Recommended]: " setup_choice
+    gold_prompt "Enter the number of your choice: " setup_choice
     add_spacing
 
     case "$setup_choice" in
