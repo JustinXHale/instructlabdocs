@@ -49,14 +49,12 @@ gold_prompt() {
 # Welcome Message
 # ============================================
 echo "======================================================"
-echo "  Welcome to InstructLab's Interactive Mode"
-echo "  This mode will guide you through the installation."
+echo "    Welcome to InstructLab's guided installation"
 echo "======================================================"
 add_spacing
-echo "This guided setup process is designed to get you up and running 
-with InstructLab as quickly and efficiently as possible."
+echo "This quick guided setup is designed to help you get started with InstructLab."
 add_spacing
-echo "By the end of this setup, you will be ready to: 
+echo "When finished, you’ll be ready to: 
 √ Chat with pre-trained models.
 √ Add knowledge to improve models.
 √ Train your own custom models."
@@ -68,11 +66,11 @@ add_spacing
 # check if the user wants to get started with pre-requisites
 # ==========================================================
 
-gold_prompt "Proceed with the setup? [YES/no]: " proceed
+gold_prompt "Start setup? [YES/no]: "
 
 if [[ "$proceed" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
     echo ""
-    light_blue_text "Here’s what will be installed during the pre-requisite setup:"
+    light_blue_text "The following prerequisite applications will be installed:"
     echo "1. Homebrew"
     echo "2. Python"
     echo "3. Git"
@@ -82,11 +80,11 @@ if [[ "$proceed" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
 highlight "Note: You can choose to opt out of installing optional applications later."
 add_spacing
 
-    gold_prompt "Proceed with installations? [YES/no]: " confirm_install
+    gold_prompt "Install prerequisite applications? [YES/no]: " confirm_install
 
     if [[ "$confirm_install" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
         echo ""
-        light_blue_text "Starting the setup..."
+        light_blue_text "Starting setup..."
     else
         status_error "Setup canceled by the user."
         exit 1
@@ -164,29 +162,29 @@ sleep 1
 
 # Check for VS Code
 purple_text "code --version"
-echo "VS Code is a text editor for editing configuration files and managing projects."
-gold_prompt "Install VS Code? [YES/no]: " install_vscode
+echo "Visual Code Studio is a text editor for editing configuration files and managing projects."
+gold_prompt "Install Visual Code Studio? [YES/no]: " install_vscode
 
 if [[ "$install_vscode" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
-    echo "Simulating installation of VS Code..."
+    echo "Simulating installation of Visual Code Studio..."
     sleep 1
-    status_ok "VS Code 1.96.3 (arm64) installed."
+    status_ok "Visual Code Studio 1.96.3 (arm64) installed."
 else
-    status_error "Skipping VS Code installation."
+    status_error "Skipping Visual Code Studio installation."
 fi
 add_spacing
 
 # Check for GitHub CLI 
 purple_text "gh --version"
 echo "GitHub CLI enables you to manage repositories and authenticate with GitHub directly from the command line."
-gold_prompt "Install GH CLI? [YES/no]: " install_ghcli
+gold_prompt "Install GitHub CLI? [YES/no]: " install_ghcli
 sleep 1
 if [[ "$install_ghcli" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
     echo "Simulating installation of GitHub CLI..."
     sleep 1
     status_ok "gh version 2.63.2 (2024-12-05) successfully installed."
 else
-    status_error "Skipping GH CLI installation."
+    status_error "Skipping GitHub CLI installation."
 fi
 add_spacing
 
@@ -210,16 +208,16 @@ status_ok "Git 2.39.5 installed."
 
     # Dynamic Status for VS Code
     if [[ "$install_vscode" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
-        status_ok "VS Code installed."
+        status_ok "Visual Code Studio installed."
     else
-        status_error "VS Code not installed."
+        status_error "Visual Code Studio not installed."
     fi
 
     # Dynamic Status for GitHub CLI
     if [[ "$install_ghcli" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
-        status_ok "GH CLI 2.63.2 installed."
+        status_ok "GitHub CLI 2.63.2 installed."
     else
-        status_error "GH CLI not installed."
+        status_error "GitHub CLI not installed."
     fi
 
     light_blue_text "Pre-requisites installed, moving to Step 2 of 5."
