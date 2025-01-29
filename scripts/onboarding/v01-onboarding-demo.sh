@@ -79,7 +79,8 @@ if [[ "$proceed" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
     echo "4. XCode"
     echo "5. Visual Code Studio (optional)"
     echo "6. GitHub CLI (optional)"
-    echo ""
+highlight "Note: You can choose to opt out of installing optional applications later."
+add_spacing
 
     gold_prompt "Proceed with installations? [YES/no]: " confirm_install
 
@@ -108,7 +109,7 @@ purple_text "xcode-select --install"
 sleep 1
 echo "XCode not found."
 echo "Simulating installation of XCode..."
-status_ok "xcode-select version 2409 successfully installed"
+status_ok "xcode-select version 2409 installed."
 add_spacing
 
 # Check for Homebrew
@@ -123,20 +124,20 @@ sleep 1
 echo "Select the Python version to install:"
 echo "[1] Python 3.11.x (Recommended)"
 echo "[2] Python 3.10.x"
-gold_prompt "Choose version: " python_choice
+gold_prompt "Enter selected version: " python_choice
 
 case "$python_choice" in
 1)
   echo "Simulating installation of Python 3.11.x..."
   sleep 1
   python_version="3.11.x"
-  status_ok "Python 3.11.x successfully installed."
+  status_ok "Python 3.11.x installed."
   ;;
 2)
   echo "Simulating installation of Python 3.10.x..."
   sleep 1
   python_version="3.10.x"
-  status_ok "Python 3.10.x successfully installed."
+  status_ok "Python 3.10.x installed."
   ;;
 *)
   status_error "Invalid choice. Please run the script again and select a valid option."
@@ -152,7 +153,7 @@ sleep 1
 echo "Git not found."
 echo "Simulating installation of Git..."
 sleep 1
-status_ok "git version 2.39.5 (Apple Git-154) successfully installed"
+status_ok "git version 2.39.5 (Apple Git-154) installed."
 add_spacing
 sleep 2
 
@@ -169,7 +170,7 @@ gold_prompt "Install VS Code? [YES/no]: " install_vscode
 if [[ "$install_vscode" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
     echo "Simulating installation of VS Code..."
     sleep 1
-    status_ok "VS Code 1.96.3 (arm64) would have been installed."
+    status_ok "VS Code 1.96.3 (arm64) installed."
 else
     status_error "Skipping VS Code installation."
 fi
@@ -177,7 +178,7 @@ add_spacing
 
 # Check for GitHub CLI 
 purple_text "gh --version"
-echo "GitHub CLI lets you manage repositories and authenticate with GitHub directly from the command line."
+echo "GitHub CLI enables you to manage repositories and authenticate with GitHub directly from the command line."
 gold_prompt "Install GH CLI? [YES/no]: " install_ghcli
 sleep 1
 if [[ "$install_ghcli" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
@@ -229,7 +230,7 @@ status_ok "Git 2.39.5 installed."
 add_spacing
 huggingface_and_github_setup() {
 echo "======================================================"
-echo "Step 2: Hugging Face & GitHub Setup"
+echo "Step 2: Hugging Face & GitHub setup"
 echo "======================================================"
 add_spacing
 
@@ -239,11 +240,12 @@ sleep 1
 status_error "No Hugging Face token found."
 
 echo ""
-echo "Follow these steps to create your token:"
+echo "To create your token, follow these steps:"
 echo "1. Visit https://huggingface.co/."
 echo "2. Create an account if you don’t have one."
 echo "3. Go to 'Settings > Access Tokens'."
-echo "4. Use Token Type 'READ' permissions and paste it below."
+echo "4. Create a token with READ permissions."
+echo "5. Copy and the token."
 add_spacing
 
 gold_text "Paste your Hugging Face Token (or press [ENTER] to skip): "
@@ -264,14 +266,14 @@ if [[ -z "$hf_token" ]]; then
     status_error "No token entered. Hugging Face token setup skipped."
     hf_token_status="skipped"
 else
-    status_ok "Hugging Face token saved successfully."
+    status_ok "Hugging Face token saved."
     hf_token_status="saved"
 fi
 
 add_spacing
 
 # GitHub Authentication
-echo "Connecting to GitHub Account."
+echo "Connecting to GitHub account."
 highlight "UX Note: Using 'gh auth login' to authenticate and manage contributions."
 
 gold_text "Authenticate GitHub? [YES or press [ENTER] to skip]: "
@@ -316,7 +318,7 @@ fi
 
 # GitHub Confirmation
 if [[ "$gh_status" == "authenticated" ]]; then
-    status_ok "GitHub was successfully authenticated."
+    status_ok "GitHub authenticated."
 else
     status_error "GitHub authentication skipped."
 fi
@@ -341,7 +343,7 @@ default_dir="$HOME/instructlab"
 current_dir=$(pwd)
 
 # Prompt user to use the current directory or default
-gold_prompt "Do you want to install InstructLab in the current directory ($current_dir)? [Yes/No]: " use_current_dir
+gold_prompt "Do you want to install InstructLab in the current directory ($current_dir)? [YES/no]: " use_current_dir
 if [[ "$use_current_dir" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
     install_dir="$current_dir"
 else
@@ -384,7 +386,7 @@ sleep 1
 echo "Installing InstructLab..."
 purple_text "pip install instructlab"
 sleep 2
-status_ok "InstructLab version 0.23.0 successfully installed!"
+status_ok "InstructLab version 0.23.0 installed!"
 light_blue_text "Step 3 completed, moving to Step 4 of 5"
 add_spacing
 }
@@ -396,16 +398,16 @@ add_spacing
 sleep 2
 configuration_setup() {
   echo "====================================================="
-  echo "Step 4: InstructLab Configuration: 'ilab config init'"
+  echo "Step 4: InstructLab configuration: 'ilab config init'"
   echo "====================================================="
   add_spacing
 
-  echo "Set up your environment for InstructLab. Provide paths and select options, or press 'ENTER' to use defaults."
+  echo "Set up your environment for InstructLab. Provide paths and select options, or press 'ENTER' use the default configuration."
   add_spacing
 
   # Step 1: Taxonomy Repository Setup
   echo "-----------------------------------------------"
-  echo "Setting up Taxonomy Repository"
+  echo "Setting up taxonomy-repository"
   echo "-----------------------------------------------"
   highlight "UX Note: Configuring taxonomy repository using GitHub CLI."
 add_spacing
@@ -421,13 +423,13 @@ add_spacing
     status_error "The directory '$taxonomy_path' does not exist or is empty."
     add_spacing
 
-    gold_text "How would you like to set up your taxonomy?"
+    gold_text "Select a taxonomy setup method"
     echo "[1] Fork the taxonomy repo to your GitHub account and clone your fork. (Recommended)"
     echo "[2] Clone the upstream taxonomy repo directly (read-only mode)."
     echo "[3] Use an existing taxonomy directory."
     add_spacing
 
-    gold_prompt "Enter the number of your choice: " setup_choice
+    gold_prompt "Enter the selected method: " setup_choice
     add_spacing
 
     case "$setup_choice" in
@@ -471,9 +473,9 @@ add_spacing
 
   # Step 2: Model Path Configuration
   echo "-----------------------------------------------"
-  echo "Setting up Model Directory"
+  echo "Setting up model directory"
   echo "-----------------------------------------------"
-  gold_text "Path to your model [Press [ENTER] for default '/Users/$USER/Documents/instructlab/models']: "
+  gold_text "Enter the path to your model, or press [ENTER] to use the default path ('/Users/$USER/Documents/instructlab/models']): "
   sleep 1
 
   default_model_path="/Users/$USER/Documents/instructlab/models"
@@ -488,12 +490,12 @@ add_spacing
 
   # Step 3: Generate Configuration & Profile Files
   echo "-----------------------------------------------"
-  echo "Generating Configuration Files"
+  echo "Generating configuration files"
   echo "-----------------------------------------------"
   purple_text "Simulating generation of config.yaml and system_profiles..."
   sleep 1
 
-  echo "✔ Configuration files generated successfully:"
+  echo "✔ Configuration files generated:"
   echo "- Config file: $taxonomy_path/config/config.yaml"
   echo "- System profiles: $taxonomy_path/config/system_profiles"
   add_spacing
@@ -501,7 +503,7 @@ add_spacing
 
   # Completion Message
   echo "--------------------------------------------------------"
-  status_ok "InstructLab Configuration Completed Successfully!"
+  status_ok "InstructLab configuration completed!"
   light_blue_text "Step 4 completed, moving to Step 5 of 5"
   echo "-------------------------------------------------------"
 add_spacing
@@ -512,7 +514,7 @@ add_spacing
 # ============================================
 model_download() {
   echo "======================================================"
-  echo "  Step 5: Downloading Models"
+  echo "  Step 5: Downloading models"
   echo "======================================================"
   add_spacing
 
@@ -520,7 +522,7 @@ model_download() {
   add_spacing
   echo "Downloading models..."
   sleep 2
-  status_ok "Model download completed successfully."
+  status_ok "Model download completed."
   add_spacing
 
   # List Models
@@ -545,12 +547,11 @@ main() {
     configuration_setup                 # Step 4: Additional configuration
     model_download                      # Step 5: Model download
     echo "================================================"
-    status_ok "InstructLab setup completed successfully!"
+    status_ok "InstructLab setup completed!"
     echo "================================================"
-    light_blue_text "Next Step: Run 'ilab model serve' to start using the model."
+    light_blue_text "Next: Run 'ilab model serve' to start using the model.
+Exiting Interactive Mode. Enjoy INSTRUCTLAB!"
 add_spacing
-    light_blue_text "Exiting Interactive Mode. Enjoy INSTRUCTLAB!"
-    add_spacing
 }
 
 # Run Main
