@@ -9,9 +9,14 @@ status_ok() {
   echo -e "\033[0;32m✅ $1\033[0m"
 }
 
-# Function for red 'status_error' messages
+# Function for 'status_error' (Red ❌ for actual errors)
 status_error() {
   echo -e "\033[0;31m❌ $1\033[0m"
+}
+
+# Function for 'status_skipped' messages (Gray ➖ Neutral for skipped actions)
+status_skipped() {
+  echo -e "\033[0;38;5;246m➖ $1\033[0m"
 }
 
 # Function to display commands in purple
@@ -70,7 +75,7 @@ gold_prompt "Start setup? [YES/no]: " proceed
 
 if [[ "$proceed" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
     echo ""
-    light_blue_text "The following prerequisite applications will be installed:"
+    light_blue_text "The following prerequisite applications will be verified and installed if necessary:"
     echo "1. Homebrew"
     echo "2. Python"
     echo "3. Git"
@@ -170,7 +175,7 @@ if [[ "$install_vscode" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
     sleep 1
     status_ok "Visual Code Studio 1.96.3 (arm64) installed."
 else
-    status_error "Skipping Visual Code Studio installation."
+    status_skipped "Skipping Visual Code Studio installation."
 fi
 add_spacing
 
@@ -184,7 +189,7 @@ if [[ "$install_ghcli" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
     sleep 1
     status_ok "gh version 2.63.2 (2024-12-05) successfully installed."
 else
-    status_error "Skipping GitHub CLI installation."
+    status_skipped "Skipping GitHub CLI installation."
 fi
 add_spacing
 
@@ -203,21 +208,21 @@ status_ok "Git 2.39.5 installed."
     elif [[ "$python_version" == "3.10.x" ]]; then
         status_ok "Python 3.10.x installed."
     else
-        status_error "Python installation skipped."
+        status_skipped "Python installation skipped."
     fi
 
     # Dynamic Status for VS Code
     if [[ "$install_vscode" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
         status_ok "Visual Code Studio installed."
     else
-        status_error "Visual Code Studio not installed."
+        status_skipped "Visual Code Studio not installed."
     fi
 
     # Dynamic Status for GitHub CLI
     if [[ "$install_ghcli" =~ ^([Yy][Ee][Ss]|[Yy])$ ]]; then
         status_ok "GitHub CLI 2.63.2 installed."
     else
-        status_error "GitHub CLI not installed."
+        status_skipped "GitHub CLI not installed."
     fi
 
     light_blue_text "Pre-requisites installed, moving to Step 2 of 5."
@@ -243,7 +248,7 @@ echo "1. Visit https://huggingface.co/."
 echo "2. Create an account if you don’t have one."
 echo "3. Go to 'Settings > Access Tokens'."
 echo "4. Create a token with READ permissions."
-echo "5. Copy and the token."
+echo "5. Copy and paste the token."
 add_spacing
 
 gold_text "Paste your Hugging Face Token (or press [ENTER] to skip): "
@@ -261,7 +266,7 @@ echo ""
 
 # Set the Hugging Face token status
 if [[ -z "$hf_token" ]]; then
-    status_error "No token entered. Hugging Face token setup skipped."
+    status_skipped "No token entered. Hugging Face token setup skipped."
     hf_token_status="skipped"
 else
     status_ok "Hugging Face token saved."
@@ -293,7 +298,7 @@ echo "✔ Configured git protocol: HTTPS"
 echo "✔ Logged in as RedHatUXD"
 gh_status="authenticated"
 else
-status_error "GitHub connection was skipped."
+status_skipped "Skipping GitHub authentication."
 gh_status="skipped"
 fi
 add_spacing
@@ -304,21 +309,21 @@ sleep 2
 # Confirmation Summary
 huggingface_and_github_confirmation() {
 echo "-----------------------------------"
-echo "Hugging Face & GitHub Confirmation"
+echo "Hugging Face & GitHub setup summary"
 echo "-----------------------------------"
 
 # Hugging Face Confirmation
 if [[ "$hf_token_status" == "saved" ]]; then
     status_ok "Hugging Face token added."
 else
-    status_error "Hugging Face token skipped."
+    status_skipped "Hugging Face token skipped."
 fi
 
 # GitHub Confirmation
 if [[ "$gh_status" == "authenticated" ]]; then
     status_ok "GitHub authenticated."
 else
-    status_error "GitHub authentication skipped."
+    status_skipped "GitHub authentication skipped."
 fi
 
 light_blue_text "Step 2 completed, moving to Step 3 of 5"
@@ -410,7 +415,7 @@ configuration_setup() {
   highlight "UX Note: Configuring taxonomy repository using GitHub CLI."
 add_spacing
 
-  gold_text "Path to taxonomy repo [Press [ENTER] for default '/Users/$USER/Documents/instructlab/taxonomy']: "
+  gold_text "Enter the taxonomy repo path, or press [ENTER] to use the default path '/Users/$USER/Documents/instructlab/taxonomy']: "
 
   default_taxonomy_path="/Users/$USER/Documents/instructlab/taxonomy"
   read -r taxonomy_path
@@ -473,7 +478,7 @@ add_spacing
   echo "-----------------------------------------------"
   echo "Setting up model directory"
   echo "-----------------------------------------------"
-  gold_text "Enter the path to your model, or press [ENTER] to use the default path ('/Users/$USER/Documents/instructlab/models']): "
+  gold_text "Enter the path to model directory, or press [ENTER] to use the default path ('/Users/$USER/Documents/instructlab/models']): "
   sleep 1
 
   default_model_path="/Users/$USER/Documents/instructlab/models"
